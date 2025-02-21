@@ -1,0 +1,3 @@
+# React Lifecycle Method Bug
+
+This repository demonstrates a common bug in React components related to the improper use of lifecycle methods for updating state.  The original `BuggyComponent.js` uses the deprecated `componentWillMount` method, which leads to inconsistent state updates, especially during server-side rendering.  The corrected version (`FixedComponent.js`) utilizes the `useEffect` hook with an empty dependency array, guaranteeing state updates even in server-side rendering environments. This approach is more reliable, consistent, and adheres to best practices.
